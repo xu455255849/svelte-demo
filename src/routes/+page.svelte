@@ -11,7 +11,7 @@
 <button on:click="{addNumber}"> num add</button>
 
 
-<Header value={count} />
+<Header count={count} {...obj} />
 
 
 
@@ -20,6 +20,11 @@
 
 	const name =  'Xushaopign'
 	const html = 'this is <span>qweqe</span>'
+
+	const obj = {
+		name: 'xu',
+		value: 'shaoping'
+	}
 
 	let numbers = [1,2,3]
 	$: sum = numbers.reduce((prev, cur) => prev + cur, 0)
